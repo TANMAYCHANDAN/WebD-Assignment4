@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Feedback</title>
+	<style>
+		label {
+			float: left;
+			width: 150px;
+		}
+
+		#container {
+			width: 700px;
+			margin: auto;
+			background-color: beige;
+		}
+
+		main {
+			padding: 50px;
+		}
+
+		.error {
+			color: red;
+			display: none;
+		}
+
+		table {
+			margin-top: 20px;
+			border-collapse: collapse;
+			width: 50%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		table,
+		th,
+		td {
+			border: 1px solid black;
+		}
+
+		th,
+		td {
+			padding: 8px;
+			text-align: left;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="container">
+		<main>
+			<h2>Feedback</h2>
+			<h3>Love something? Hate something? Let us know!</h3>
+			Note: Fields marked with an asterisk (*) are mandatory.
+			<br><br>
+			<form method="post" name="myForm" id="myForm" novalidate>
+				<label>Title*:</label>
+				<input type="radio" name="title" id="title" value="Miss" required="required" />Miss
+				<input type="radio" name="title" id="title" value="Mr." required="required" />Mr.
+				<input type="radio" name="title" id="title" value="Mrs." required="required" />Mrs.
+				<div class="error" id="error-title">Please select a title</div>
+				<br><br>
+
+				<label for="firstName">First Name*:</label>
+				<input type="text" name="firstName" id="firstName" placeholder="First Name" />
+				<div class="error" id="error-firstName">Please enter a valid First name</div>
+				<br><br>
+
+				<label for="lastName">Last Name*:</label>
+				<input type="text" name="lastName" id="lastName" placeholder="Last Name" />
+				<div class="error" id="error-lastName">Please enter a valid Last name</div>
+				<br><br>
+
+				<label for="emailId">Email Id*:</label>
+				<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com" />
+				<div class="error" id="error-emailId">Please enter a valid Northeastern Email Address</div>
+				<br><br>
+
+				<label for="phoneNumber">Phone Number*:</label>
+				<input type="text" name="phoneNumber" id="phoneNumber" placeholder="(xxx) xxx-xxxx" />
+				<div class="error" id="error-phoneNumber">Please enter a valid Phone Number in the format: (xxx) xxx-xxxx
+				</div>
+				<br><br>
+
+				<label for="streetAddress1">Street Address 1*:</label>
+				<input type="text" name="streetAddress1" id="streetAddress1" placeholder="Your Street Address" />
+				<div class="error" id="error-streetAddress1">Please enter a valid Street Address</div>
+				<br><br>
+
+				<label for="streetAddress2">Street Address 2:</label>
+				<input type="text" name="streetAddress2" id="streetAddress2" placeholder="Your City" maxlength="20" />
+				<span id="address2-counter">0/20 characters used</span>
+				<br><br>
+
+				<label for="zipcode">ZipCode*:</label>
+				<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" />
+				<div class="error" id="error-zipcode">Please enter a valid Zip code</div>
+				<br><br>
+
+				<label for="source">How did you hear*:</label>
+				<input type='checkbox' name="source" id="source" value="Facebook" /> Facebook
+				<input type='checkbox' name="source" id="source" value="Google" /> Google
+				<input type='checkbox' name="source" id="source" value="Yelp" /> Yelp
+				<div class="error" id="error-source">Please select atleast one value</div>
+				<br><br>
+
+				<label for="options">Drink*:</label>
+				<select id="options" name="options">
+					<option value="">--Please choose a drink--</option>
+					<option value="Cappuccino">Cappuccino</option>
+					<option value="Coffee">Coffee</option>
+					<option value="Macchiato">Macchiato</option>
+					<option value="Lemonade">Lemonade</option>
+					<option value="Latte">Latte</option>
+				</select>
+				<div class="error" id="error-options">Please select atlease one choice</div>
+				<br><br>
+
+				<div id="DnyamicCheckBoxContainer">
+				</div>
+
+				<br><br>
+				<label for="comments">Comments*:</label>
+				<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25"></textarea>
+				<div class="error" id="error-comments">Please enter your comments</div>
+				<br><br>
+
+				<input type="submit" id="submitButton" disabled>
+				<input type="reset">
+				<br><br>
+			</form>
+		</main>
+	</div>
+
+	<table id="resultTable">
+		<thead>
+			<tr>
+				<th>Title</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Address 1</th>
+				<th>Address 2</th>
+				<th>Favorite Drink</th>
+				<th>Size</th>
+				<th>Zip</th>
+				<th>Source</th>
+				<th>Comments</th>
+			</tr>
+		</thead>
+		<tbody>
+		</tbody>
+	</table>
+	<script src="script.js">
+
+	</script>
+
+</body>
+
+</html>
